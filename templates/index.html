@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="static/theme.css" type="text/css">
+</head>
+
+<body style="">
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container"> <a class="navbar-brand" href="#">
+        <i class="fa d-inline fa-lg fa-circle"></i>
+        <b> Vinyl Listener</b>
+      </a> </div>
+  </nav>
+  <div class="py-5 text-center">
+    <div class="container">
+      <div class="row">
+        <div class="mx-auto col-lg-6">
+          <h1>{{page_title}}</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-lg-12 text-center"><a class="btn btn-dark btn-lg" href="listen">Listen now</a></div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p class=""><br>(Uses 1 audd.io credit)<br></p>
+          <p class="text-danger"><a href="setup" class="text-danger">(See important note on audd.io keys and costs)</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card bg-light mb-3">
+            <div class="card-header">Available browser endpoints</div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-6" style="">
+                  <p class=""><a href="/setup">/setup</a></p>
+                </div>
+                <div class="col-md-6" style="">
+                  <p class="">Loads an user interface which allows modification of the stored audd.io api key</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-6" style="">
+                  <p class="">/listen</p>
+                </div>
+                <div class="col-md-6" style="">
+                  <p class="">Activates microphone on Raspberry Pi to record 10 seconds of audio, sends it to the online API for parsing and returns the response in a HTML friendly format. Shows status pages along the way so the user knows something is happening.&nbsp;&nbsp;<b>(Uses one audd.io credit)</b></p>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-6" style="">
+                  <p class="">/listen/silent</p>
+                </div>
+                <div class="col-md-6" style="">
+                  <p class="">Activates microphone on Raspberry Pi to record 10 seconds of audio, sends it to the online API for parsing and returns the response in a HTML friendly format. Does not show status pages along the way, just loads for a long time with recording and processing.&nbsp;&nbsp;<b>(Uses one audd.io credit)</b></p>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-6" style="">
+                  <p class="">/display</p>
+                </div>
+                <div class="col-md-6" style="">
+                  <p class="" style="" contenteditable="true">Displays output of the most recently parsed track (Does not use an audd.io credit - all run locally)</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-6" style="">
+                  <p class="">/art</p>
+                </div>
+                <div class="col-md-6" style="">
+                  <p class="" style="">Redirects to the artwork URL generated following /listen or /listen/silent</p>
+                </div>
+              </div>
+            </div>
+          </div><b>
+          </b>
+        </div><b>
+        </b>
+      </div><b>
+      </b>
+    </div><b>
+    </b>
+  </div>
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card bg-light mb-3">
+            <div class="card-header">Available API endpoints</div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-6" style="">
+                  <p class="">/listen/json</p>
+                </div>
+                <div class="col-md-6" style="">
+                  <p class="">Activates microphone on Raspberry Pi to record 10 seconds of audio, sends it to the online API for parsing and returns the response in JSON. This can take 10-20 seconds to return anything as it needs to listen and then parse via the web API.&nbsp;&nbsp;<b>(Uses one audd.io credit)</b></p>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-6" style="">
+                  <p class="">/display/json</p>
+                </div>
+                <div class="col-md-6" style="">
+                  <p class="" style="">Displays output of the most recently parsed track in JSON format (Does not use an audd.io credit - all run locally)</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-6" style="">
+                  <p class="">/download_art</p>
+                </div>
+                <div class="col-md-6" style="">
+                  <p class="" style="">Downloads the artwork for the most recently parsed track to the local folder as artwork.jpeg. Returns JSON showing the full path (Does not use an audd.io credit)</p>
+                </div>
+              </div>
+            </div>
+          </div><b>
+          </b>
+        </div><b>
+        </b>
+      </div><b>
+      </b>
+    </div><b>
+    </b>
+  </div><b>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </b>
+</body>
+
+</html>

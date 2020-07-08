@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="static/theme.css" type="text/css">
+</head>
+
+<body style="">
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container"> <a class="navbar-brand" href="#">
+        <i class="fa d-inline fa-lg fa-circle"></i>
+        <b> Vinyl Listener</b>
+      </a> </div>
+  </nav>
+  <div class="py-5 text-center">
+    <div class="container">
+      <div class="row">
+        <div class="mx-auto col-lg-6" style="">
+          <h1>{{page_title}}</h1>
+          <p class="mb-4 text-left">In order to identify playing music you need to sign up for an API key with <a href="https://audd.io/">audd.io</a><br><br>They offer 300 free requests, which should be enough to get you up and running and to test out the system<br><br>To get an API key you need to <a href="https://t.me/auddbot?start=api">use their Telegram bot</a>&nbsp;but please note the following important warning</p>
+          <div class="card text-white bg-dark mb-3">
+            <div class="card-header bg-danger">Important note about audd.io</div>
+            <div class="card-body">
+              <p class="card-text text-left">audd.io is not a free service.<br><br>They offer a trial period for 2 weeks which gives you 300 requests, which you can request via the Telegram bot.<br><br>Once you have exhausted this you will need to sign up for one of their paid plans. These can be fairly affordable, and at the time of writing they offer 1000 requests per month for $2.<br><br>However please note that if you sign up for a plan and send a lot of requests them you can run up considerable bills. For instance 100,000 requests will cost $420. Once you sign up for a plan they will let you carry on sending API requests for as long as you want and then send you the bill.<br><br>Be careful how many API requests you send! You can monitor your usage via their Telegram bot.<br><br>it is YOUR responsibility to manage your usage of audd.io. I accept no legal, financial or moral responsibility if you get a big bill from them after sending a lot of requests. I am not affiliated with audd.io.</p>
+            </div>
+          </div>
+          <p class="mb-4 text-left">Once you have an API key please enter it below and press setup</p>
+          <form class="form-inline d-flex justify-content-center" action="{{ url_for('new_api_key') }}" method="post">
+            <div class="input-group"> <input type="text" class="form-control form-control-lg" placeholder="{{placeholder}}" value="{{field_text}}" name="new_key">
+              <div class="input-group-append"> <button class="btn btn-primary" type="submit">set up API key</button> </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
