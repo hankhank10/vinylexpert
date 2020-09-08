@@ -115,4 +115,4 @@ def display(display_option="default"):
 
 ## Main loop
 if __name__ == '__main__':
-    app.run(debug=True, port=6006, host='0.0.0.0')
+    app.run(debug=True, port=80, host='0.0.0.0')
